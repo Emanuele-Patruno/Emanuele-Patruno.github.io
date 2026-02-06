@@ -99,6 +99,21 @@ body.dark-theme{
   color: var(--first-color);
 }
 
+/*==================== LANGUAGE BUTTON ====================*/
+.lang-btn {
+  background: none;
+  border: none;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+}
+
+.lang-btn:hover {
+  color: var(--first-color);
+}
+
 /*==================== BASE ====================*/
 * {
   box-sizing: border-box;
@@ -509,6 +524,22 @@ img {
   background-color: var(--first-color);
 }
 
+.skills__java{
+  width: 80%;
+}
+
+.skills__rest{
+  width: 80%;
+}
+
+.skills__postman{
+  width: 70%;
+}
+
+.skills__sql{
+  width: 70%;
+}
+
 .skills__figma{
   width: 90%;
 }
@@ -520,7 +551,6 @@ img {
 .skills__photoshop{
   width: 50%;
 }
-
 
 
 .skills__html{
@@ -637,7 +667,7 @@ img {
 /*==================== SERVICES ====================*/
 .services__container{
   gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .services__content{
@@ -1210,7 +1240,7 @@ img {
   }
 
   .services__container{
-    grid-template-columns: repeat(3, 238px);
+    grid-template-columns: repeat(4, 238px);
   }
 
   .portfolio__content{
