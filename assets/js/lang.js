@@ -141,7 +141,7 @@ window.translations = {
     /* HOME */
     home_title: "Ciao, sono Emanuele",
     home_subtitle: "Backend Developer (Java) • UX Background",
-    home_description:"Esperienza junior in UX design, frontend e sviluppo di videogiochi.",
+    home_description:"Backend developer focalizzato su Java e API REST. Background in UX con esperienza pratica in progetti web e videoludici.",
     home_cta: "Contattami",
     home_scroll: "Scorri giù",
 
