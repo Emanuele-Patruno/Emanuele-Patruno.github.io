@@ -126,6 +126,12 @@ window.translations = {
     footer_services: "Services",
     footer_portfolio: "Portfolio",
     footer_contact: "Contact me",
+
+    /* MGS EASTER EGG */
+    mgs_incoming:  "&#9670; INCOMING TRANSMISSION &#9670;",
+    mgs_answer:    "[ press any key to answer ]",
+    mgs_close:     "[ press any key to close ]",
+    mgs_message:   "You found my tribute to my favourite video game series: Metal Gear Solid. Congratulations!",
   },
 
   it: {
@@ -252,7 +258,13 @@ window.translations = {
     footer_subtitle: "Backend Developer",
     footer_services: "Servizi",
     footer_portfolio: "Portfolio",
-    footer_contact: "Contattami"
+    footer_contact: "Contattami",
+
+    /* MGS EASTER EGG */
+    mgs_incoming:  "&#9670; TRASMISSIONE IN ARRIVO &#9670;",
+    mgs_answer:    "[ premi un tasto per rispondere ]",
+    mgs_close:     "[ premi un tasto per chiudere ]",
+    mgs_message:   "Hai trovato il mio omaggio alla mia serie di videogiochi preferita: Metal Gear Solid. Ti faccio le mie congratulazioni!",
   }
 };
 
@@ -285,6 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Testo bottone (mostra la lingua "opposta" per lo switch)
     langButton.textContent = lang === "en" ? "IT" : "EN";
     localStorage.setItem("lang", lang);
+    document.dispatchEvent(new CustomEvent('languageSet', { detail: { lang } }));
   }
 
   langButton.addEventListener("click", () => {
