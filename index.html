@@ -78,17 +78,17 @@
                         </li>
                     </ul>
 
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                    <i class="uil uil-times nav__close" id="nav-close" role="button" tabindex="0" aria-label="Close navigation menu"></i>
                 </div>
 
                 <div class="nav__btns">
                     <button id="lang-button" class="lang-btn">EN</button>
 
                     <!-- Theme change button -->
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+                    <i class="uil uil-moon change-theme" id="theme-button" role="button" tabindex="0" aria-label="Toggle theme"></i>
 
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
+                    <div class="nav__toggle" id="nav-toggle" role="button" tabindex="0" aria-label="Open navigation menu">
+                        <i class="uil uil-apps" aria-hidden="true"></i>
                     </div>
                 </div>
             </nav>
@@ -101,12 +101,12 @@
                 <div class="home__container container grid">
                     <div class="home__content grid">
                         <div class="home__social">
-                            <a href="https://www.linkedin.com/in/emanuele-patruno/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
+                            <a href="https://www.linkedin.com/in/emanuele-patruno/" target="_blank" class="home__social-icon" aria-label="LinkedIn profile">
+                                <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
                             </a>
 
-                            <a href="https://www.instagram.com/ema_.design/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-instagram"></i>
+                            <a href="https://www.instagram.com/ema_.design/" target="_blank" class="home__social-icon" aria-label="Instagram profile">
+                                <i class="uil uil-instagram" aria-hidden="true"></i>
                             </a>
                         </div>
 
@@ -154,12 +154,24 @@
             </section>
 
             <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
+            <section class="about section section--numbered section--alt" id="about">
                 <h2 class="section__title" data-i18n="about_title">About Me</h2>
                 <span class="section__subtitle" data-i18n="about_subtitle">My introduction</span>
 
                 <div class="about__container container grid">
-                    <img src="assets/img/about.webp" alt="" class="about__img">
+                    <div class="about__img-flip" title="Hint...">
+                        <div class="about__img-flip-inner">
+                            <div class="about__img-flip-front">
+                                <img src="assets/img/about.webp" alt="" class="about__img">
+                            </div>
+                            <div class="about__img-flip-back">
+                                <p class="about__flip-label">Try this:</p>
+                                <p class="about__flip-code">↑ ↑ ↓ ↓</p>
+                                <p class="about__flip-code">← → ← →</p>
+                                <p class="about__flip-code">B &nbsp; A</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="about__data">
                         <p class="about__description" data-i18n="about_description">
@@ -169,21 +181,21 @@
 
                         <div class="about__info">
                             <div>
-                                <span class="about__info-title">2</span>
+                                <span class="about__info-title" data-target="2">2</span>
                                 <span class="about__info-name" data-i18n="about_info_experience">
                                 Year <br> experience
                                 </span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">6</span>
+                                <span class="about__info-title" data-target="6">6</span>
                                 <span class="about__info-name" data-i18n="about_info_projects">
                                 Completed <br> projects
                                 </span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">4</span>
+                                <span class="about__info-title" data-target="4">4</span>
                                 <span class="about__info-name" data-i18n="about_info_companies">
                                 Companies <br> worked
                                 </span>
@@ -206,7 +218,7 @@
             </section>
 
             <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
+            <section class="skills section section--numbered" id="skills">
                 <h2 class="section__title" data-i18n="skills_title">Skills</h2>
                 <span class="section__subtitle" data-i18n="skills_subtitle">My technical level</span>
                 <div class="skills__container container grid">
@@ -441,19 +453,19 @@
             </section>
 
             <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
+            <section class="qualification section section--numbered section--alt">
                 <h2 class="section__title" data-i18n="qual_title">Qualification</h2>
                 <span class="section__subtitle" data-i18n="qual_subtitle">My personal journey</span>
 
                 <div class="qualification__container container">
                     <div class="qualification__tabs">
-                        <div class="qualification__button button--flex qualification__active" data-target="#education">
-                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                        <div class="qualification__button button--flex qualification__active" data-target="#education" role="button" tabindex="0">
+                            <i class="uil uil-graduation-cap qualification__icon" aria-hidden="true"></i>
                             <span data-i18n="qual_tab_education">Education</span>
                         </div>
 
-                        <div class="qualification__button button--flex" data-target="#work">
-                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                        <div class="qualification__button button--flex" data-target="#work" role="button" tabindex="0">
+                            <i class="uil uil-briefcase-alt qualification__icon" aria-hidden="true"></i>
                             <span data-i18n="qual_tab_work">Work</span>
                         </div>
                     </div>
@@ -614,7 +626,7 @@
             </section>
 
             <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
+            <section class="services section section--numbered" id="services">
                 <h2 class="section__title" data-i18n="services_title">Services</h2>
                 <span class="section__subtitle" data-i18n="services_subtitle">What I offer</span>
 
@@ -626,7 +638,7 @@
                             <h3 class="services__title" data-i18n="services_backend_title">Backend <br> Developer</h3>
                         </div>
 
-                        <span class="button button--flex button--small button--link services__button">
+                        <span class="button button--flex button--small button--link services__button" role="button" tabindex="0">
                         <span data-i18n="services_view_more">View more</span>
                             <i class="uil uil-arrow-right button__icon"></i>
                         </span>
@@ -634,7 +646,7 @@
                         <div class="services__modal">
                             <div class="services__modal-content">
                                 <h4 class="services__modal-title" data-i18n="services_backend_title">Backend <br> Developer</h4>
-                                <i class="uil uil-times services__modal-close"></i>
+                                <i class="uil uil-times services__modal-close" role="button" tabindex="0" aria-label="Close modal"></i>
 
                                 <ul class="services__modal-services grid">
                                     <li class="services__modal-service">
@@ -668,7 +680,7 @@
                             <h3 class="services__title" data-i18n="services_frontend_title">Frontend <br> Developer</h3>
                         </div>
 
-                        <span class="button button--flex button--small button--link services__button">
+                        <span class="button button--flex button--small button--link services__button" role="button" tabindex="0">
                         <span data-i18n="services_view_more">View more</span>
                             <i class="uil uil-arrow-right button__icon"></i>
                         </span>
@@ -676,7 +688,7 @@
                         <div class="services__modal">
                             <div class="services__modal-content">
                                 <h4 class="services__modal-title" data-i18n="services_frontend_title">Frontend <br> Developer</h4>
-                                <i class="uil uil-times services__modal-close"></i>
+                                <i class="uil uil-times services__modal-close" role="button" tabindex="0" aria-label="Close modal"></i>
 
                                 <ul class="services__modal-services grid">
                                     <li class="services__modal-service">
@@ -712,7 +724,7 @@
                             <h3 class="services__title" data-i18n="services_game_title">Game <br> Developer</h3>
                         </div>
 
-                        <span class="button button--flex button--small button--link services__button">
+                        <span class="button button--flex button--small button--link services__button" role="button" tabindex="0">
                         <span data-i18n="services_view_more">View more</span>
                             <i class="uil uil-arrow-right button__icon"></i>
                         </span>
@@ -720,7 +732,7 @@
                         <div class="services__modal">
                             <div class="services__modal-content">
                                 <h4 class="services__modal-title" data-i18n="services_game_title">Game <br> Developer</h4>
-                                <i class="uil uil-times services__modal-close"></i>
+                                <i class="uil uil-times services__modal-close" role="button" tabindex="0" aria-label="Close modal"></i>
 
                                 <ul class="services__modal-services grid">
                                     <li class="services__modal-service">
@@ -746,7 +758,7 @@
                             <h3 class="services__title" data-i18n="services_ux_title">Ux <br> Designer</h3>
                         </div>
 
-                        <span class="button button--flex button--small button--link services__button">
+                        <span class="button button--flex button--small button--link services__button" role="button" tabindex="0">
                         <span data-i18n="services_view_more">View more</span>
                             <i class="uil uil-arrow-right button__icon"></i>
                         </span>
@@ -754,7 +766,7 @@
                         <div class="services__modal">
                             <div class="services__modal-content">
                                 <h4 class="services__modal-title" data-i18n="services_ux_title">Ux <br> Designer</h4>
-                                <i class="uil uil-times services__modal-close"></i>
+                                <i class="uil uil-times services__modal-close" role="button" tabindex="0" aria-label="Close modal"></i>
 
                                 <ul class="services__modal-services grid">
                                     <li class="services__modal-service">
@@ -784,7 +796,7 @@
             </section>
 
             <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
+            <section class="portfolio section section--numbered section--alt" id="portfolio">
                 <h2 class="section__title" data-i18n="portfolio_title">Portfolio</h2>
                 <span class="section__subtitle" data-i18n="portfolio_subtitle">Most recent work</span>
 
@@ -867,7 +879,7 @@
             </section> -->
 
             <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
+            <section class="contact section section--numbered" id="contact">
                 <h2 class="section__title" data-i18n="contact_title">Contact Me</h2>
                 <span class="section__subtitle" data-i18n="contact_subtitle">Get in touch</span>
 
@@ -957,11 +969,11 @@
                     </ul>
 
                     <div class="footer__socials">
-                        <a href="https://www.instagram.com/ema_.design/" target="_blank" class="footer__social">
-                            <i class="uil uil-instagram"></i>
+                        <a href="https://www.instagram.com/ema_.design/" target="_blank" class="footer__social" aria-label="Instagram profile">
+                            <i class="uil uil-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/emanuele-patruno/" target="_blank" class="footer__social">
-                            <i class="uil uil-linkedin-alt"></i>
+                        <a href="https://www.linkedin.com/in/emanuele-patruno/" target="_blank" class="footer__social" aria-label="LinkedIn profile">
+                            <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -969,8 +981,8 @@
         </footer>
         
         <!--==================== SCROLL TOP ====================-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
+        <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+            <i class="uil uil-arrow-up scrollup__icon" aria-hidden="true"></i>
         </a>
 
         <!--==================== LANG JS ====================-->
@@ -983,7 +995,7 @@
         <script src="assets/js/email.js"></script>
 
         <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js?v=6"></script>
 
     </body>
 </html>
