@@ -105,6 +105,7 @@ window.translations = {
     portfolio_1_description:"A videogame made for mobile devices. Done when I was interning at Divulgando Srl.",
     portfolio_2_description:"While interning at Ubiz3D Srl, I developed an interactive Virtual Tour that allowed people to visit a mattress store directly from a PC or smartphone.",
     portfolio_3_description:"I reinterpreted and improved the interfaces of popular applications, posting the result on my Instagram page.",
+    portfolio_4_description:"A web app to discover equivalences between luxury perfumes and Equivalenza line codes, with search, filters and a fragrance quiz.",
 
     /* CONTACT */
     contact_title: "Contact Me",
@@ -119,6 +120,11 @@ window.translations = {
     contact_label_message: "Message *",
 
     contact_send: "Send Message",
+    contact_sending: "Sending...",
+    contact_success: "Thank you for your message! I will get back to you as soon as possible.",
+    contact_error_required: "Please fill in all required fields.",
+    contact_error_email: "Please enter a valid email address.",
+    contact_error_send: "Something went wrong while sending. Please try again or email me directly.",
 
     /* FOOTER */
     footer_title: "Emanuele",
@@ -238,6 +244,7 @@ window.translations = {
     portfolio_1_description:"Un videogioco per dispositivi mobili, realizzato durante il tirocinio presso Divulgando Srl.",
     portfolio_2_description:"Durante il tirocinio presso Ubiz3D Srl ho sviluppato un Virtual Tour interattivo che permette di visitare un negozio di materassi da PC o smartphone.",
     portfolio_3_description:"Ho reinterpretato e migliorato le interfacce di applicazioni popolari, pubblicando il risultato sulla mia pagina Instagram.",
+    portfolio_4_description:"Un'app web per trovare le equivalenze tra profumi di lusso e i codici della linea Equivalenza, con ricerca, filtri e un quiz olfattivo.",
 
     /* CONTACT */
     contact_title: "Contattami",
@@ -252,6 +259,11 @@ window.translations = {
     contact_label_message: "Messaggio *",
 
     contact_send: "Invia messaggio",
+    contact_sending: "Invio in corso...",
+    contact_success: "Grazie per il tuo messaggio! Ti risponderò il prima possibile.",
+    contact_error_required: "Compila tutti i campi obbligatori.",
+    contact_error_email: "Inserisci un indirizzo email valido.",
+    contact_error_send: "Si è verificato un errore durante l'invio. Riprova oppure scrivimi direttamente via email.",
 
     /* FOOTER */
     footer_title: "Emanuele",
@@ -296,6 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Testo bottone (mostra la lingua "opposta" per lo switch)
     langButton.textContent = lang === "en" ? "IT" : "EN";
+    document.documentElement.lang = lang;
     localStorage.setItem("lang", lang);
     document.dispatchEvent(new CustomEvent('languageSet', { detail: { lang } }));
   }

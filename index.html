@@ -7,6 +7,22 @@
         <meta name="description" content="Emanuele Patruno's portfolio">
         <meta name="author" content="Emanuele Patruno">
 
+        <!--==================== FAVICON ====================-->
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+        <meta name="theme-color" content="#6e57e0">
+
+        <!--==================== OPEN GRAPH / SOCIAL ====================-->
+        <link rel="canonical" href="https://emanuelepatruno.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://emanuelepatruno.com/">
+        <meta property="og:title" content="Portfolio Emanuele Patruno">
+        <meta property="og:description" content="Backend developer focused on Java and REST APIs. UX background with hands-on experience in web and game projects.">
+        <meta property="og:image" content="https://emanuelepatruno.com/assets/img/perfil.webp">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Portfolio Emanuele Patruno">
+        <meta name="twitter:description" content="Backend developer focused on Java and REST APIs. UX background with hands-on experience in web and game projects.">
+        <meta name="twitter:image" content="https://emanuelepatruno.com/assets/img/perfil.webp">
+
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         
@@ -28,6 +44,9 @@
         <title>Portfolio Emanuele Patruno</title>
     </head>
     <body>
+        <!--==================== ANTI-FOUC: applica il tema prima del primo paint ====================-->
+        <script>(function(){var s=localStorage.getItem('selected-theme');if(s==='dark'||(s===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.body.classList.add('dark-theme');})()</script>
+
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -851,6 +870,24 @@
                                 </a>
                             </div>
                         </div>
+
+                        <!--==================== PORTFOLIO 4 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/decode.webp" alt="DeCode" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">DeCode</h3>
+                                <p class="portfolio__description" data-i18n="portfolio_4_description">
+                                    A web app to discover equivalences between luxury perfumes and Equivalenza line codes, with search, filters and a fragrance quiz.
+                                </p>
+
+                                <a href="https://emanuelepatruno.com/DeCode/" target="_blank"
+                                   class="button button--flex button--small portfolio__button">
+                                    <span data-i18n="portfolio_link">Link</span>
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Add Arrows -->
@@ -913,7 +950,7 @@
                         </div>
                     </div>
 
-                    <form action="" class="contact__form grid" onsubmit="event.preventDefault(); sendMail();">
+                    <form action="" class="contact__form grid" id="contact-form" novalidate>
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="name" class="contact__label" data-i18n="contact_label_name">Name *</label>
@@ -942,6 +979,8 @@
                                 <i class="uil uil-message button__icon"></i>
                             </button>
                         </div>
+
+                        <p id="contact-status" class="contact__status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </section>

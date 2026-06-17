@@ -116,7 +116,9 @@ function scrollActive(){
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
+        // 90px: header fisso (4.5rem = 72px) + margine, così la sezione
+        // cliccata dalla nav risulta subito attiva
+        const sectionTop = current.offsetTop - 90;
         sectionId = current.getAttribute('id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
@@ -157,12 +159,25 @@ const selectedIcon = localStorage.getItem('selected-icon')
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
 
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)')
+
 // We validate if the user previously chose a topic
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+} else if (systemDark.matches) {
+  // No saved choice: follow the system preference
+  document.body.classList.add(darkTheme)
+  themeButton.classList.add(iconTheme)
 }
+
+// Keep following the system preference until the user picks a theme manually
+systemDark.addEventListener('change', (e) => {
+  if (localStorage.getItem('selected-theme')) return
+  document.body.classList[e.matches ? 'add' : 'remove'](darkTheme)
+  themeButton.classList[e.matches ? 'add' : 'remove'](iconTheme)
+})
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
@@ -366,7 +381,7 @@ themeButton.addEventListener('click', () => {
         scanBand.className = 'site-scan-band'
         document.body.appendChild(scanBand)
 
-        if (typeof window.mgsSpawnGuards === 'function') window.mgsSpawnGuards()
+        if (typeof window.mgsSpawnGuards === 'function' && window.innerWidth > 768) window.mgsSpawnGuards()
     }
 
     document.addEventListener('keydown', (e) => {
@@ -502,7 +517,6 @@ const revealSelectors = [
     '.about__img', '.about__data',
     '.skills__content',
     '.qualification__data',
-    '.portfolio__content',
     '.contact__information', '.contact__form'
 ]
 
